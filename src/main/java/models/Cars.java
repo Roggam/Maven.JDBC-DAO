@@ -85,6 +85,7 @@ public class Cars {
                 ", year=" + year +
                 ", make='" + make + '\'' +
                 ", model='" + model + '\'' +
+                ", color='" + color + '\'' +
                 ", vin='" + vin + '\'' +
                 '}';
     }

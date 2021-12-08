@@ -1,13 +1,10 @@
 package daos;
 
-import com.sun.jdi.connect.Connector;
 import models.Cars;
-
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+
 
 public class DAO implements DAOInterface<Cars> {
 
@@ -16,7 +13,7 @@ public class DAO implements DAOInterface<Cars> {
         Connection connection = ConnectionFactory.getConnection();
         try {
             Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM user WHERE id=" + id);
+            ResultSet rs = stmt.executeQuery("SELECT * FROM car WHERE id=" + id);
             if (rs.next()) {
                 return extractCarsFromResult(rs);
             }

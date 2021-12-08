@@ -5,6 +5,7 @@ public class Cars {
     private Integer year;
     private String make;
     private String model;
+    private String color;
     private String vin;
 
 
@@ -12,11 +13,19 @@ public class Cars {
 
     }
 
-    public Cars(Integer id, Integer year, String make, String model, String vin) {
+    public Cars( Integer year, String make, String model,String color, String vin) {
+        this.year = year;
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.vin = vin;
+    }
+    public Cars(Integer id, Integer year, String make, String model,String color ,String vin) {
         this.id = id;
         this.year = year;
         this.make = make;
         this.model = model;
+        this.color = color;
         this.vin = vin;
     }
 
@@ -51,6 +60,14 @@ public class Cars {
 
     public void setModel(String model) {
         this.model = model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public String getVin() {
